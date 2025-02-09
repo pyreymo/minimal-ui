@@ -3,19 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ffffff; /* 白色背景 */
+  --foreground: #171717; /* 深色前景 */
+  --text: #000000; /* 黑色文字 */
+  --border: #444444; /* 边框颜色 */
+  --button-bg: #171717; /* 按钮文字 */
+  --button-text: #f0f0f0; /* 按钮背景 */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #212121; /* 黑色背景 */
+    --foreground: #ececec; /* 浅色前景 */
+    --text: #ffffff; /* 白色文字 */
+    --border: #e0e0e0; /* 边框颜色 */
+    --button-bg: #ececec; /* 按钮文字 */
+    --button-text: #333333; /* 按钮背景 */
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "HarmonyOS Sans SC", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  font-weight: bold;
 }
